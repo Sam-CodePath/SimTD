@@ -1,6 +1,7 @@
 package com.example.simpletodo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -28,12 +29,17 @@ public class MainActivity extends AppCompatActivity {
         edItem = findViewById(R.id.etItem);
         rvItems = findViewById(R.id.rvItems);
 
-
         items = new ArrayList<>();
         items.add("Buy milk");
         items.add("Go to the gym");
         items.add("Have fun!");
 
+
+        ItemsAdapter itemsAdapter = new ItemsAdapter(items);
+        rvItems.setAdapter(itemsAdapter);
+
+        // Puts things on the UI in a vertical way 
+        rvItems.setLayoutManager((new LinearLayoutManager(this)));
 
     }
 }
