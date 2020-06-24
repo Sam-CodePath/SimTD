@@ -23,6 +23,7 @@ The following **stretch** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+![GIF demo of SimpleTodo](https://i.imgur.com/RNd0fjj.gif)
 <img src='https://i.imgur.com/RNd0fjj.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
