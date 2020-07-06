@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     List<String> items;
 
     Button btnAdd;
+    Button btnClear;
     EditText edItem;
     RecyclerView rvItems;
     ItemsAdapter itemsAdapter;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnAdd);
         edItem = findViewById(R.id.etItem);
         rvItems = findViewById(R.id.rvItems);
+        btnClear = findViewById(R.id.btnClear);
 
         loadItems();
 
@@ -106,6 +108,15 @@ public class MainActivity extends AppCompatActivity {
                 saveItems();
 
 
+            }
+        });
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                items.clear();
+                itemsAdapter.notifyDataSetChanged();
+                saveItems();
             }
         });
 
